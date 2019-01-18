@@ -1,0 +1,4 @@
+insmod mt76sta/mt7601u.ko
+ifconfig wlan0 up
+wpa_supplicant -B -d -Dnl80211 -iwlan0 -c/etc/wpa_supplicant.conf
+udhcpc -i wlan0

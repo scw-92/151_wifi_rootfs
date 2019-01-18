@@ -1,0 +1,4 @@
+echo "AT\$QCrMCAll=1,1" > /dev/ttyUSB3
+sleep 1
+udhcpc -i wwan0
+ping -I wwan0 -c 100 -s 65500 www.zhihu.com

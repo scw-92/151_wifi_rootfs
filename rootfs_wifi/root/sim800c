@@ -1,0 +1,16 @@
+
+#echo 19 > /sys/class/gpio/export
+#echo out  > /sys/class/gpio/gpio19/direction
+
+#echo 1 > /sys/class/gpio/gpio19/value
+#sleep 1
+#echo 0 > /sys/class/gpio/gpio19/value
+#sleep 2
+echo 1 > /sys/class/gpio/gpio19/value
+sleep 1
+echo 0 > /sys/class/gpio/gpio19/value
+sleep 2
+
+#route add default gw 192.168.254.254 > /dev/null 2>&1
+#ping -I ppp0 -c 100 -s 1000 www.zhihu.com
+

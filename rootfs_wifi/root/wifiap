@@ -1,0 +1,6 @@
+killall udhcpd 
+sleep 1
+insmod mt76ap/mt7601Uap.ko
+ifconfig ra0 192.168.2.1 netmask 255.255.255.0 up
+touch /var/lib/misc/udhcpd.leases
+udhcpd -f /etc/udhcpd.conf &
